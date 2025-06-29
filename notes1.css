@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap');
+:root{
+    --pink:#FF046F;
+    --violet:#C63BFA;
+}
+*{
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+}
+*::selection{
+    background: var(--pink);
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+/* body{
+    background: #333;
+    height: 3000px;
+} */
+.heading{
+    font-size: 4rem;
+    color: var(--pink);
+    text-align: center;
+    padding: 0 1rem;
+    padding-top: 6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+}
+.title{
+    font-size: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+    font-weight: 400;
+    color: #aaa;
+}
+
+/* CSS for nagivation */
+header{
+    width: 96%;
+    background: #fff;
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: 0.2s;
+}
+
+.header-active{
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0px 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+
+}
+
+header .navbar ul li{
+    margin: 0px 1rem;
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    color: var(--pink);
+    transition: 0.2s;
+}
+
+header .navbar ul li a button{
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 5rem;
+    background: var(--pink);
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+    box-shadow: 0 1rem 1rem rgba(99, 0, 0, 0.3);
+}
+header .navbar ul li a button:hover{
+    background: var(--violet);
+    /* background: #410058; */
+    /* background: skyblue; */
+    /* color: black; */
+    opacity: 0.8;
+    letter-spacing: 0.2rem;
+}
+
+header .navbar ul li .active,
+header .navbar ul li a:hover{
+    color: var(--violet);
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color: var(--violet);
+    text-transform: capitalize;
+}
+
+header .logo i{
+    color: var(--pink);
+    padding: 0 0.2rem;
+
+}
+
+header .fa-bars{
+    font-size: 2rem;
+    color: var(--pink);
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+}
+
+header .fa-times{
+    transform: rotate(180deg);
+    color: var(--violet);
+}
+
+body{
+    background-color: #74EbD5;
+    background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
+}
+section{
+    margin-top:100px ;
+}
+.container{
+    width:100%;
+    height: 100vh;
+    /* padding-top: 100px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #74EbD5;
+    background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%); */
+    /* background: linear-gradient(to right, #00093c, #2d0b00); */
+}
+.container1{
+    width:100%;
+    height: 100vh;
+    margin-top: -300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #74EbD5;
+    background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
+    /* background: linear-gradient(to right, #00093c, #2d0b00); */
+}
+
+.box{
+    width: 325px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 80px;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.box h3{
+    font-size: 35px;
+    padding: 20px 0;
+    color: #444;
+}
+
+.box p{
+    font-size: 15px;
+    color: #777;
+}
+
+.box button{
+    width:140px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.box button:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.box::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.box::after{
+    width: 100%;
+    height: 100%;
+    background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    clip-path: circle(20% at 90% 10%);
+    transition:all 0.2s ease;
+}
+
+.box .count{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.box:nth-child(2)::after{
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0c7 100%);
+}
+.box:nth-child(3)::after{
+    background-color: #08AEEA;
+    background-image: linear-gradient(160deg, #08AEEA 0%, #28F598 100%);
+}
+.box:nth-child(4)::after{
+    background-color: #08AEEA;
+    background-image: linear-gradient(160deg, #08AEEA 0%, #28F598 100%);
+}
+
+.box:hover::after{
+    clip-path: circle(100%);
+}
+
+.box:hover h3{
+    color: #fff;
+}
+.box:hover p{
+    color: #fff;
+}
+.box:hover button{
+    color: #333;
+    background-color: #fff;
+}
+
+.box:hover::before{
+    background-color: rgba(0, 0, 0, .1);
+}
+
+footer .text-center {
+    margin-top: 150px;
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    html {
+      font-size: 55%;
+    }
+    header .fa-bars {
+      display: block;
+    }
+    header .navbar {
+      position: fixed;
+      top: -100rem;
+      left: 0px;
+      width: 100%;
+      background: #fff;
+      border-radius: 1rem;
+      opacity: 0;
+      transition: 0.3s linear;
+      /* display: none; */
+    }
+    header .navbar ul {
+      flex-flow: column;
+      padding: 2rem 0;
+    }
+    header .navbar ul li {
+      margin: 1rem 0;
+      width: 100%;
+      text-align: center;
+    }
+    header .navbar ul li a {
+      font-size: 2.5rem;
+      display: block;
+    }
+    header .nav-toggle {
+      top: 5.5rem;
+      opacity: 1;
+    }
+  }
+

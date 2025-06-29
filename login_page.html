@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Maker-Login and Signup</title>
+  <link rel="stylesheet" href="login_page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    function validateform() {
+      var x = document.forms["myform"]["uname"].value;
+      var y = document.forms["myform"]["pwd"].value;
+      var c1 = document.forms["myform"]["cpwd"].value;
+      var em = document.forms["myform"]["email"].value;
+      if (x == "" || y == "" || c1 == "" || em == "") {
+        document.getElementById("Error").innerHTML = "required fields must be filled out";
+        document.getElementById("Error").style.color = "Red";
+        document.getElementById("name").style.borderColor = "Red";
+        document.getElementById("pwd").style.borderColor = "Red";
+        return false;
+      }
+    }
+    function matchpassword() {
+      var password = document.getElementById("pwd").value;
+      var cpassword = document.getElementById("cpwd").value;
+      if (password != cpassword) {
+        document.getElementById("Error").innerHTML = "password should be same";
+        document.getElementById("cpwd").style.borderColor = "Red";
+        document.getElementById("Error").style.color = "Red";
+        document.getElementById("cpwd").value = "";
+        return false;
+      }
+    }
+    function log() {
+      window.location.href = "main.html"
+    }
+  </script>
+
+  <script src="jquery-3.7.0.min.js"></script>
+
+
+</head>
+
+
+<body style="background-image: linear-gradient(135deg,skyblue,white,skyblue)">
+<!-- <body style="background-image: url(laptop-image.jpg); height: 40px;"> -->
+  
+  <!-- <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="your_info.html">Create Your Own Portfolio </a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="main_about.html">Work With Us</a></li>
+      <li><a href="#">Policy and Privacy</a></li>
+      <li><a href="#">Feedback</a></li>
+      <li><a href="login_page.html">Logout</a></li>
+    </ul>
+  </nav> -->
+
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form name="myform" onsubmit="validateform()" action="main.html">
+        <h1>Create Account</h1>
+        <div class="social-container">
+          <a href="https://www.facebook.com/login/" class="social"><i class="fa fa-facebook-f"></i></a>
+          <a href="https://accounts.google.com" class="social"><i class="fa fa-google"></i></a>
+          <a href="https://in.linkedin.com/" class="social"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <span>or use your email for registration</span>
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" name="email" required />
+        <input type="password" placeholder="Password" name="pwd" id="pwd" required />
+        <input type="password" placeholder="Confirm Password" name="cpwd" onblur="return matchpassword()" required />
+        <button type="submit" class="button">Sign Up</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form action="index.html">
+        <h1>Sign in</h1>
+        <div class="social-container">
+          <a href="https://www.facebook.com/login/" class="social"><i class="fa fa-facebook-f"></i></a>
+          <a href="https://accounts.google.com" class="social"><i class="fa fa-google"></i></a>
+          <a href="https://in.linkedin.com/" class="social"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <span>or use your account</span>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <a href="login_forgotpass.html"><u>Forgot your password?</u></a>
+        <!-- <a href="main.html"><input class="button" type="button" value="Sign In"></a> -->
+        <button type="submit" class="button">Sign In</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button class="ghost button" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button class="ghost button" id="signUp" class="button">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      <i class="fa fa-copyright" aria-hidden="true"></i>
+      Copyright belongs to Ashish Sharma
+    </p>
+  </footer>
+
+  <script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+    signUpButton.addEventListener('click', () => {
+      container.classList.add("right-panel-active");
+    });
+    signInButton.addEventListener('click', () => {
+      container.classList.remove("right-panel-active");
+    });
+  </script>
+</body>
+
+</html>

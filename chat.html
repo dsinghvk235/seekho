@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\
+    <title>ChatBox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="add.css">
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="https://res.cloudinary.com/dxqgi4a8m/image/upload/v1716548093/logo-modified_s64ulm.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Seekho</span>
+                    <span class="profession">Sab sath seekho</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="chat.html">
+                            <i class='bx bxs-user icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="post.html">
+                            <i class='bx bxs-bookmark icon'></i>
+                            <span class="text nav-text">Save</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="add.html">
+                            <i class='bx bx-add-to-queue icon'></i>
+                            <span class="text nav-text">Add Post</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">Likes</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Wallets</span>
+                        </a>
+                    </li> -->
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <!-- <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li> -->
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- dashboard start -->
+   <section class="home" id="dashboard">
+    <div class="hero">
+        <div class="card">
+            <div class="top">
+                <div class="userDeatils">
+                    <div class="profileImg">
+                        <img src="https://res.cloudinary.com/dxqgi4a8m/image/upload/v1706678676/pp_d4gmcd.jpg" alt="user" class="cover">
+                    </div>
+                    <h3>Arydeep Sah<br><span>@aryasah19</span></h3>
+                </div>
+                <h5 class="postTime">5 hours ago</h5>
+            </div>
+            <div class="imgBg">
+                <img src="https://res.cloudinary.com/dxqgi4a8m/image/upload/v1716232827/11834981_jltemm.jpg" alt="bg" class="cover">
+            </div>
+           <div class="sub">
+                <div class="chose" >
+                    <b><i class="fa-regular fa-circle-dot"></i>&nbsp;Physics&nbsp;<i class="fa-solid fa-xmark"></i></b>
+                    <b><i class="fa-regular fa-circle-dot"></i>&nbsp;Example&nbsp;<i class="fa-solid fa-xmark"></i></b>
+                    <b><i class="fa-regular fa-circle-dot"></i>&nbsp;Solution&nbsp;<i class="fa-solid fa-xmark"></i></b>
+                </div>
+           </div>
+            <h4 class="message">
+                <p>As a physics teacher, it's essential to guide students through understanding and solving problems effectively. Let's break down this projectile motion question together. </p>
+            </h4><br>
+            <div class="btns">
+                <div class="left">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-regular fa-bookmark"></i>
+                </div>
+            </div>
+            <h4 class="likes">5,489 likes</h4>
+            <h4 class="comments">View all 546 comments</h4>
+            
+        </div>
+        <div class="card">
+            <div class="top">
+                <div class="userDeatils">
+                    <div class="profileImg">
+                        <img src="https://res.cloudinary.com/dxqgi4a8m/image/upload/v1706596684/samples/balloons.jpg" alt="user" class="cover">
+                    </div>
+                    <h3>Ashish Yadav<br><span>@anu20</span></h3>
+                </div>
+                <h5 class="postTime">10 hours ago</h5>
+            </div>
+            <div class="imgBg">
+                <img src="https://res.cloudinary.com/dxqgi4a8m/image/upload/v1716233016/pexels-pixabay-276452_j2p9gm.jpg" alt="bg" class="cover">
+            </div>
+           <div class="sub">
+            <div class="chose" >
+                <b><i class="fa-regular fa-circle-dot"></i>&nbsp;DSA&nbsp;<i class="fa-solid fa-xmark"></i></b>
+                <b><i class="fa-regular fa-circle-dot"></i>&nbsp;Example&nbsp;<i class="fa-solid fa-xmark"></i></b>
+                <!-- <b><i class="fa-regular fa-circle-dot"></i>&nbsp;Solution&nbsp;<i class="fa-solid fa-xmark"></i></b> -->
+            </div>
+           </div>
+           
+            <h4 class="message">
+                <p>Given an array of integers, find the maximum subarray sum, where a subarray is defined as a contiguous sequence of elements within the array.😊😊 </p>
+            </h4><br>
+            <div class="btns">
+                <div class="left">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-regular fa-bookmark"></i>
+                </div>
+            </div>
+            <h4 class="likes">10,354 likes</h4>
+            <h4 class="comments">View all 1046 comments</h4>
+        </div>
+        <div class="card">
+            <div class="top">
+                <div class="userDeatils">
+                    <div class="profileImg">
+                        <img src="https://res.cloudinary.com/dxqgi4a8m/image/upload/v1706596691/cld-sample-2.jpg" alt="user" class="cover">
+                    </div>
+                    <h3>Aaditya Sharma<br><span>@aadisharma12</span></h3>
+                </div>
+                <h5 class="postTime">20 hours ago</h5>
+            </div>
+            <div class="imgBg">
+                <img src="https://res.cloudinary.com/dxqgi4a8m/image/upload/v1716233072/11834994_ux164q.jpg" alt="bg" class="cover">
+            </div>
+           <div class="sub">
+            <div class="chose" >
+                <b><i class="fa-regular fa-circle-dot"></i>&nbsp;Chem&nbsp;<i class="fa-solid fa-xmark"></i></b>
+                <b><i class="fa-regular fa-circle-dot"></i>&nbsp;Example&nbsp;<i class="fa-solid fa-xmark"></i></b>
+                <b><i class="fa-regular fa-circle-dot"></i>&nbsp;Solution&nbsp;<i class="fa-solid fa-xmark"></i></b>
+            </div>
+           </div>
+           
+            <h4 class="message">
+                <p>Calculate the molarity (M) of a solution when 0.5 moles of sodium chloride (NaCl) are dissolved in 2 liters of water.
+                    Solution Approach:
+                    Understanding Molarity: Molarity (M) is defined as the number of moles of solute per liter of solution. It's expressed in moles per liter (mol/L).</p>
+            </h4><br>
+            <div class="btns">
+                <div class="left">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-regular fa-bookmark"></i>
+                </div>
+            </div>
+            <h4 class="likes">4,729 likes</h4>
+            <h4 class="comments">View all 286 comments</h4>
+        </div>
+    </div>
+   </section>
+    <!-- dashboard end -->
+<script src="chat.js"></script>
+</body>
+</html>

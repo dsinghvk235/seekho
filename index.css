@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap');
+:root{
+    --violet:#C63BFA;
+    --gray : #aaa;
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
+    --white: #fff;
+}
+body.dark
+{
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900: #ffffff;
+    --text-black-700: #e9e9e9;
+}
+*{
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+*::selection{
+    background: var(--pink);
+    color: var(--bg-black-900);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+/* body{
+    background: #333;
+    height: 3000px;
+} */
+.heading{
+    font-size: 4rem;
+    color: var(--pink);
+    text-align: center;
+    padding: 0 1rem;
+    padding-top: 6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+}
+.title{
+    font-size: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+/* CSS for nagivation */
+header{
+    width: 96%;
+    background: var(--bg-black-100);
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: 0.2s;
+}
+
+.header-active{
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0px 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+
+}
+
+header .navbar ul li{
+    margin: 0px 1rem;
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    color: var(--pink);
+    transition: 0.2s;
+}
+
+header .navbar ul li a button{
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 5rem;
+    background: var(--pink);
+    color: var(--bg-black-900);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+    box-shadow: 0 1rem 1rem rgba(99, 0, 0, 0.3);
+}
+header .navbar ul li a button:hover{
+    background: var(--violet);
+    /* background: #410058; */
+    /* background: skyblue; */
+    /* color: black; */
+    opacity: 0.8;
+    letter-spacing: 0.2rem;
+}
+
+header .navbar ul li .active,
+header .navbar ul li a:hover{
+    color: var(--violet);
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color: var(--pink);
+    text-transform: capitalize;
+}
+
+header .logo i{
+    color: var(--pink);
+    padding: 0 0.2rem;
+
+}
+
+header .fa-bars{
+    font-size: 2rem;
+    color: var(--pink);
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+}
+
+header .fa-times{
+    transform: rotate(180deg);
+    color: var(--violet);
+}
+
+
+/* CSS for Home */
+.home{
+    min-height: 100vh;
+    /* background: linear-gradient(rgba(198,58,250,.8),rgba(198,58,250,.8)),url(bg.jpg) no-repeat; */
+    background: linear-gradient(rgba(73, 94, 229, 0.8),rgba(168, 59, 208, 0.8)),url(bg.jpg) no-repeat;
+    /* background: url(bg.jpg) no-repeat; */
+    /* background: linear-gradient(to right, #00093c, #2d0b00),url(bg2.webp) no-repeat; */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.home .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-top: 14rem;
+    padding-bottom: 8rem;
+    text-align: center;
+}
+
+.home .content h1{
+    font-size: 5rem;
+    color: var(--white);
+    padding: 0 1rem ;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3);
+    /* text-transform: uppercase; */
+}
+
+.home .content p{
+    font-size: 2rem;
+    color: var(--white);
+    padding: 1rem 25rem;
+}
+
+.home .content button{
+    height: 4rem;
+    width: 20rem;
+    border-radius: 5rem;
+    background: var(--pink);
+    color: var(--bg-black-900);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+    box-shadow: 0 .3rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.home .content button:hover{
+    letter-spacing: 0.2rem;
+    background: var(--violet);
+}
+
+.home .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.home .box-container .box{
+    height: 20rem;
+    width: 25rem;
+    background: var(--bg-black-100);
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5) ;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.home .box-container :hover{
+    transform: scale(1.05);
+}
+
+.home .box-container .box i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--pink);
+    color: var(--bg-black-900);
+    font-size: 3rem;
+    transition: 0.2s;
+    margin: 2rem 0;
+}
+
+.home .box-container .box h3{
+    font-size: 2rem;
+    color: var(--pink);
+    transition: 0.2s;
+}
+
+.home .box-container .box p{
+    font-size: 1.3rem;
+    padding: 0.7rem 2rem ;
+    color: var(--gray);
+}
+
+.home .box-container .box:hover i{
+    background: var(--violet);
+}
+.home .box-container .box:hover h3{
+    color: var(--violet);
+}
+
+.home::before{
+    content: ' ';
+    position: absolute;
+    bottom: -25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 70vh solid var(--bg-black-900);
+    width: 120%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* CSS about Section */
+.about
+{
+    background: var(--bg-black-900);
+}
+.about .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .row .image img{
+    height: 70vh;
+    width: 50vw;
+}
+
+.about .row .content{
+    padding-left: 5rem;
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color: var(--pink);
+}
+.about .row .content p{
+    font-size:1.6rem;
+    color: var(--gray);
+    padding: 1rem 0;
+}
+
+.about .row .content button{
+    height: 3.5rem;
+    width: 17rem;
+    background: var(--pink);
+    color: var(--bg-black-900);
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-size: 2rem;
+    transition: 0.2s;
+}
+
+.about .row .content button:hover{
+    letter-spacing: 0.2rem;
+    opacity: 0.8;
+    background: var(--violet);
+}
+
+/* CSS for teacher */
+
+.teacher{
+    background: var(--bg-black-900);
+    /* background: url(bg.jpg); */
+}
+
+.teacher .card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.teacher .card-container .card:hover{
+    transform: scale(1.05);
+}
+.teacher .card-container .card{
+    padding: 2rem;
+    margin: 2rem;
+    background: var(--bg-black-100);
+    text-align: center;
+    width: 28rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3);
+}
+.teacher .card-container .card img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale();
+}
+.teacher .card-container .card img:hover{
+    filter: grayscale(0);
+}
+.teacher .card-container .card h3{
+    color: var(--pink);
+    font-size: 2rem;
+    padding: .5rem 0;
+}
+
+.teacher .card-container .card p{
+    font-size: 1.7rem;
+    color: var(--gray);
+}
+
+.teacher .card-container .card .icons a{
+    font-size: 1.9rem;
+    padding: 1.5rem .5rem;
+    /* color: rgb(145, 162, 225); */
+    color: var(--pink);
+    /* color: black; */
+}
+
+.teacher .card-container .card .icons a:hover{
+    color: var(--violet);
+}
+
+
+/* CSS for course Section */
+.course
+{
+    background: var(--bg-black-900);
+}
+.course .box-container{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+    /* background-color: #C63BFA; */
+}
+
+.course .box-container .box{
+    height: 18rem;
+    width: 27rem;
+    margin: 3.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0.3rem 0.3rem 0 0.1rem var(--violet),
+                0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+    background: var(--bg-black-100);
+}
+
+.course .box-container .box:hover{
+    transform: scale(1.05);
+}
+
+.course .box-container .box i{
+    height: 10rem;
+    width: 10rem;
+    line-height: 8rem;
+    text-align: center;
+    color: var(--bg-black-900);
+    border-radius: 50%;
+    background: var(--pink);
+    margin-top: -4rem;
+    border: 1rem solid var(--bg-black-900);
+    border-left: 1rem solid var(--pink);
+    border-right: 1rem solid var(--pink);
+    box-shadow: 0 0 0 1rem var(--bg-black-900) inset;
+    font-size: 3.5rem;
+}
+
+.course .box-container .box i:hover{
+    background-color: var(--violet);
+}
+
+.course .box-container .box h3{
+    font-size: 2rem;
+    color: var(--pink);
+}
+
+.course .box-container .box p{
+    font-size: 1.5rem;
+    color: var(--gray);
+    padding: 1rem 0;
+}
+
+
+/* CSS for reviwe section */
+.reviwe {
+    background: var(--bg-black-900);
+}
+
+.reviwe .box-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.reviwe .box-container .box{
+    width: 28rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    box-shadow: 0 0.3rem .5rem rgba(0, 0, 0, 0.3);
+    background: var(--bg-black-100);
+    margin: 4rem 2rem;
+}
+.reviwe .box-container .box img{
+    height: 8.5rem;
+    width: 8.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -4rem;
+    border: .6rem solid var(--pink);
+    border-left: .6rem solid var(--violet);
+    border-right: .6rem solid var(--violet);
+}
+.reviwe .box-container .box h3{
+    font-size: 2rem;
+    color: var(--pink);
+    padding: 0 .5rem;
+}
+.reviwe .box-container .box p{
+    font-size: 1.4rem;
+    color: var(--gray);
+    padding: 0 1.3rem;
+}
+
+.reviwe .box-container .box .stars i{
+    font-size: 1.6rem;
+    color: var(--violet);
+    padding: 1.3rem .1rem;
+}
+
+/* CSS for footer */
+footer{
+    background: #000;
+}
+footer .ff{
+    width: 100%;
+    position: absolute;
+    /* bottom: ; */
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: var(--gray);
+    padding: 100px 0px 30px;
+    /* border-top-left-radius: 125px;
+    border-top-right-radius: 125px; */
+    font-size: 13px;
+    line-height: 20px;
+}
+
+footer .ff .row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+footer .ff .row .col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+footer .ff .row .col:nth-child(2), footer .row .col:nth-child(3){
+    flex-basis: 15%;
+}
+
+footer .ff .row .col .logo{
+    height: 70px;
+    width: 100px;
+    margin: 30px;
+}
+
+footer .ff .row .col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+footer .ff .row .col .email-id{
+    width: fit-content;
+    border-bottom: 1px solid var(--bg-black-50);
+    margin: 20px 0;
+    text-transform: lowercase;
+}
+
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: var(--gray);
+
+}
+
+footer .ff .row .col form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--bg-black-50);
+    margin-bottom: 50px;
+}
+
+footer .ff .row .col form .fa-regular{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+footer .ff .row .col form input{
+    width: 100%;
+    background: transparent;
+    color: var(--bg-black-50);
+    border: 0;
+    outline: none;
+}
+
+footer .ff .row .col form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+footer .ff .row .col form button .fa-sharp{
+    font-size: 16px;
+    color: var(--bg-black-100);
+}
+
+footer .ff .row .col .social-icon .fab{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #000;
+    background: var(--pink);
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+footer .ff .row .col .social-icon .fab:hover{
+    background: var(--violet);
+}
+footer .ff hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid var(--bg-black-50);
+    margin: 20px auto;
+}
+footer .ff .text-center {
+    text-align: center;
+    /* color: grey; */
+    color: var(--bg-black-50);
+    /* top:12px0; */
+}
+
+footer .ff .row .col h3 .underline{
+    width: 100%;
+    height: 5px;
+    background: var(--gray);
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    overflow: hidden;
+}
+footer .ff .row .col h3 .underline span{
+    width: 15px;
+    height: 100%;
+    background: var(--pink);
+    border-radius: 3px;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+    0%{
+        left:-20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+
+
+
+@media (max-width:768px) {
+    html{
+        font-size: 55%;
+    }
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: fixed;
+        top: -100rem;
+        left: 0px;
+        width: 100%;
+        background:#fff;
+        border-radius: 1rem;
+        opacity: 0;
+        transition: 0.3s linear;
+        /* display: none; */
+    }
+    header .navbar ul{
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+    header .navbar ul li{
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    header .navbar ul li a{
+        font-size: 2.5rem;
+        display: block;
+    }
+    header .nav-toggle{
+        top: 5.5rem;
+        opacity: 1;
+    }
+
+    .home .content p{
+        padding: 1.5rem 2rem ;
+    }
+    .home::before{
+        display: none;
+    }
+
+    .about .row{
+        flex-flow: column-reverse;
+    }
+    .about .row .image img{
+        height: 60vh;
+        width: 90vw;
+    }
+    .about .row .content {
+        padding: 0 2.5rem;
+    }
+
+    .course .box-container{
+        width: 100%;
+    }
+
+    footer{
+        bottom: unset;
+    }
+
+    footer .row .col{
+        flex-basis: 100%;
+        
+    }
+    
+    footer .row .col:nth-child(2), footer .row .col:nth-child(3){
+        flex-basis: 100%;
+    }
+}

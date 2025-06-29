@@ -1,0 +1,243 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,400italic);
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap'); */
+:root{
+    --pink:#FF046F;
+    --violet:#C63BFA;
+}
+*{
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+}
+*::selection{
+    background: var(--pink);
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+/* body{
+    background: #333;
+    height: 3000px;
+} */
+.heading{
+    font-size: 4rem;
+    color: var(--pink);
+    text-align: center;
+    padding: 0 1rem;
+    padding-top: 6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+}
+.title{
+    font-size: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+    font-weight: 400;
+    color: #aaa;
+}
+
+/* CSS for nagivation */
+header{
+    width: 96%;
+    background: #fff;
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: 0.2s;
+}
+
+.header-active{
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0px 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+
+}
+
+header .navbar ul li{
+    margin: 0px 1rem;
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    color: var(--pink);
+    transition: 0.2s;
+}
+
+header .navbar ul li a button{
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 5rem;
+    background: var(--pink);
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+    box-shadow: 0 1rem 1rem rgba(99, 0, 0, 0.3);
+}
+header .navbar ul li a button:hover{
+    background: var(--violet);
+    /* background: #410058; */
+    /* background: skyblue; */
+    /* color: black; */
+    opacity: 0.8;
+    letter-spacing: 0.2rem;
+}
+
+header .navbar ul li .active,
+header .navbar ul li a:hover{
+    color: var(--violet);
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color: var(--violet);
+    text-transform: capitalize;
+}
+
+header .logo i{
+    color: var(--pink);
+    padding: 0 0.2rem;
+
+}
+
+header .fa-bars{
+    font-size: 2rem;
+    color: var(--pink);
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+}
+
+header .fa-times{
+    transform: rotate(180deg);
+    color: var(--violet);
+}
+
+
+body {
+  margin: 0;
+  /* background: #eee; */
+  
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-color: #74EbD5;
+  background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
+}
+
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+  
+  padding: 100px 32px;
+  box-sizing: border-box;
+}
+.container h1 {
+    font-style: italic;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: left;
+  /* color: #d35151; */
+  color: #a84f43;
+
+  margin-bottom: 20px;
+
+}
+
+.card {
+  margin: 32px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background: white;
+  
+  width: 100%;
+  min-height: 80px;
+  
+  display: flex;
+
+  cursor: pointer;
+  border-radius:50px;
+  border:1px solid #333;
+}
+.card:hover{
+    transform: scale(1.02);
+}
+
+.card .icon-container {
+  width: 80px;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card .description {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  
+  padding: 8px 8px 8px 0;
+}
+
+.card .description .name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.card .description .name span {
+  font-size: .6em;
+  font-weight: normal;
+  font-style: italic;
+  
+  color: #bbb;
+}
+
+.loading-icon {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  border: 0.25rem solid #ddd;
+  border-top-color: #333;
+  display: inline-block;
+  margin: 0 8px;
+  
+ 
+}
+
+
+
+@media screen and (max-width: 700px) {
+  
+  .container {
+    width: 100%;
+  }
+  
+}

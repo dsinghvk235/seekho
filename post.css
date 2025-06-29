@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #eee;
+}
+/* .hero1
+{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#e7baff, #c2b6d9);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+} */
+.card{
+    position: relative;
+    width: 460px;
+    min-height: 400px;
+    background: #fff;
+    box-shadow: 15px 15px 60px rgba(0, 0, 0, .15);
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.card .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .top .userDeatils{
+    display: flex;
+    align-items: center;
+}
+.card .top .userDeatils .profileImg{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+    overflow: hidden;
+}
+.cover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    background-size: cover;
+    object-position: center;
+    cursor: pointer;
+}
+.card .top .userDeatils h3{
+    font-size: 18px;
+    color: #4d4d4f;
+    font-weight: 700;
+    line-height: 1rem;
+    cursor: pointer;
+}
+.card .top .userDeatils span{
+    font-size: 0.75em;
+}
+.card .top .dot{
+    transform: scale(0.6);
+    cursor: pointer;
+}
+.imgBg{
+    position: relative;
+    width: 100%;
+    height: 380px;
+    margin: 10px 0 15px;
+    display: block;
+    /* background-size: cover; */
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btns img{
+    max-width: 24px;
+    cursor: pointer;
+}
+.btns .left i{
+    margin-right: 6px;
+}
+.likes{
+    margin-top: 5px;
+    font-size: 1em;
+    color: #4d4d4f;
+}
+.message{
+    font-weight: 400;
+    margin-top: 5px;
+    color: #777;
+    line-height: 1.5em;
+}
+.message b{
+    color: #262626;
+}
+.message span{
+    color: #1d92ff;
+    cursor: pointer;
+}
+.comments{
+    margin-top: 10px;
+    align-items: center;
+    color: #999;
+}
+.sub
+{
+    height: 50px;
+    width: 360px;
+}
+.sub .chose
+{
+    display: inline-flex;
+    gap: 30px;
+    margin: 10px;
+    
+}
+b
+{
+    height: 25px;
+    width: 116px;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+    background: #79f79b;
+    border-radius: 2px; 
+}
+

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Forgot Password</title>
+  <link rel="stylesheet" href="login_forgetpass_ashish.css">
+  <style>
+    .background
+      {
+          min-height: 69.33vh;
+          min-width: 100vw;
+          display:block;
+          position: relative;
+      }
+      .background::before
+      {
+          content:'';
+          /* height: 100vh; */
+          background-image: url(https://img.freepik.com/premium-vector/cyber-security-concept-with-hud-element-blue-tone-background_99087-130.jpg?size=626&ext=jpg&ga=GA1.1.788582044.1685394757&semt=ais);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          filter: blur(4px);
+          /* opacity: 0.5; */
+          margin-top: -250px;
+      }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      height: 230px;
+      margin: 50px auto;
+      /* background-color: #fff; */
+      padding: 20px;
+      padding-top: 10px;
+      /* border-radius: 5px; */
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+      /* border: 2px solid black; */
+      margin-top: 250px;
+      position: relative;
+    }
+
+    h2 {
+      text-align: center;
+      color: whitesmoke;
+      margin-bottom: 20px;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 1px;
+      margin-bottom: 20px;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      outline: none;
+      transition: border-bottom-color 0.3s;
+    }
+
+    input[type="email"]:focus {
+      border-bottom-color: #FF4B2B;
+    }
+
+    input[type="submit"] {
+      border: 1px solid #FF4B2B;
+      background-color: #e7a962;
+      color: rgb(0, 0, 0);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      color: #f2f2f2;
+      background-color: #FF4B2B;
+    }
+
+    .message {
+      margin-top: 20px;
+      text-align: center;
+      color: hsl(198, 95%, 52%);
+    }
+    .button {
+      border-radius: 20px;
+      border: 1px solid #FF4B2B;
+      background-color: #e7a962;
+      color: #000000;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+    }
+    input[type="button"]:hover{
+      color: #f2f2f2;
+      background-color: #FF4B2B;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background">
+    <div class="container">
+      <h2>Forgot Password</h2>
+      <form>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="submit" value="Reset Password">
+      </form>
+      <p class="message">A password reset link will be sent to your email.</p>
+      <a href="login_page.html"><input class="button" style="float: right; margin-bottom: 10px;" type="button" value="Go Back"></a>
+      <a href="#"><input class="button" style="float: left; margin-bottom: 10px;" type="button" value="Resend"></a>
+    </div>
+  </div>
+
+</body>
+
+</html>
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+  <title>Forgot Password</title>
+  <style>
+    body {
+      /* background-image: linear-gradient(135deg,white,skyblue); */
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      /* background-image: linear-gradient(135deg,white,skyblue); */
+      max-width: 400px;
+      height: 230px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      padding-top: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 1px;
+      margin-bottom: 20px;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      outline: none;
+      transition: border-bottom-color 0.3s;
+    }
+
+    input[type="email"]:focus {
+      border-bottom-color: #FF4B2B;
+    }
+
+    input[type="submit"] {
+      border: 1px solid #FF4B2B;
+      background-color: #e7a962;
+      color: rgb(0, 0, 0);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      color: #f2f2f2;
+      background-color: #FF4B2B;
+    }
+
+    .message {
+      margin-top: 20px;
+      text-align: center;
+      color: #666;
+    }
+    .button {
+      border-radius: 20px;
+      border: 1px solid #FF4B2B;
+      background-color: #e7a962;
+      color: #000000;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+    }
+    input[type="button"]:hover{
+      color: #f2f2f2;
+      background-color: #FF4B2B;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Forgot Password</h2>
+    <form>
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <input type="submit" value="Reset Password">
+    </form>
+    <p class="message">A password reset link will be sent to your email.</p>
+    <a href="login_page.html"><input class="button" style="float: right; margin-bottom: 10px;" type="button" value="Go Back"></a>
+    <a href="#"><input class="button" style="float: left; margin-bottom: 10px;" type="button" value="Resend"></a>
+  </div>
+
+</body>
+
+</html> -->
